@@ -1,3 +1,9 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .radix-themes {
 	--default-font-family: var(--font-gilroy);
 }
