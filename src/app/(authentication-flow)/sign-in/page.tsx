@@ -1,13 +1,20 @@
-// Next Imports
-import type { Metadata } from "next";
+"use client"
 
-export const metadata: Metadata = {
-  title: "Sign In",
-  description: "Sign In to your account",
-};
+import AuthLayout from '@/components/auth-layout/auth-layout';
+import SignInForm from '../../../components/form/sign-in-form';
 
-const SignInPage = async () => {
-  return <div>Sign In Form</div>;
+const SignInPage = () => {
+
+  return (
+    <AuthLayout
+      imageSrc="/SignIn.svg"
+      imageAlt="Anime character"
+      logoSrc="/Logo.svg"
+      logoAlt="Logo icon"
+    >
+      <SignInForm />
+    </AuthLayout>
+  );
 };
 
 export default SignInPage;
