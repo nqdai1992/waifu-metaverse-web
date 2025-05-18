@@ -3,13 +3,15 @@ import { CheckIcon } from "@radix-ui/react-icons"
 import { Link, Text } from "@radix-ui/themes"
 import Image from "next/image"
 import { Checkbox, Form } from "radix-ui"
+import { useState } from "react"
 
 const SignInForm = () => {
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
-        // Handle login logic here
-        console.log("Login submitted")
+    const [passwordError, setPasswordError] = useState("")
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
+        setPasswordError("Please enter the correct password.")
     }
 
     return (
@@ -30,7 +32,9 @@ const SignInForm = () => {
                     <Form.Control asChild>
                         <FormInput label="Password" type="password" placeHolder="Enter your password" />
                     </Form.Control>
+                {passwordError && <p className="text-[#FF3B30] text-sm mt-3">{passwordError}</p>}
                 </Form.Field>
+
 
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
@@ -48,7 +52,7 @@ const SignInForm = () => {
                             Remember for 30 days
                         </label>
                     </div>
-                    <Link href="/forgot-password" className="text-sm text-[#5bbce3]">
+                    <Link href="/forgot-password" className="text-sm !text-[#4359A9]">
                         Forgot password
                     </Link>
                 </div>
@@ -73,7 +77,7 @@ const SignInForm = () => {
                 </button>
                 <div className='flex justify-center'>
                     <Text>Don’t have an account?&ensp;</Text>
-                    <Link href="/sign-up" className='text-[#4359A9]'>Sign Up</Link>
+                    <Link href="/sign-up" className='!text-[#4359A9]'>Sign Up</Link>
                 </div>
             </Form.Root>
         </>

@@ -1,14 +1,32 @@
 import FormInput from "@/components/form-input/form-input"
 import { ArrowLeftIcon } from "@radix-ui/react-icons"
 import { Link, Text } from "@radix-ui/themes"
+import { useRouter } from "next/navigation"
 import { Form } from "radix-ui"
+import { useState } from "react"
 
 const ResetPasswordForm = () => {
 
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [error, setError] = useState("")
+    const router = useRouter();
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        // Handle login logic here
-        console.log("Login submitted")
+        if (!password || !confirmPassword) {
+            setError("Please provide both password and confirmation password");
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            setError("Passwords don't match");
+            return;
+        }
+        setError("");
+
+        router.push('/sign-in');
+
     }
 
     return (
@@ -21,13 +39,30 @@ const ResetPasswordForm = () => {
             <Form.Root className="space-y-6" onSubmit={handleSubmit}>
                 <Form.Field name="password">
                     <Form.Control asChild>
-                        <FormInput label="Password" type="password" placeHolder="Enter your password" />
+                        <FormInput
+                            label="Password"
+                            type="password"
+                            value={password}
+                            placeHolder="Enter your password"
+                            onChange={(e) => {
+                                setPassword(e.target.value)
+                            }}
+                        />
                     </Form.Control>
                 </Form.Field>
                 <Form.Field name="confirm-password">
                     <Form.Control asChild>
-                        <FormInput label="Confirm New Password" type="password" placeHolder="Repeat your new password" />
+                        <FormInput
+                            label="Confirm New Password"
+                            type="password"
+                            value={confirmPassword}
+                            placeHolder="Repeat your new password"
+                            onChange={(e) => {
+                                setConfirmPassword(e.target.value)
+                            }}
+                        />
                     </Form.Control>
+                    {error && <p className="text-[#FF3B30] text-sm mt-3">{error}</p>}
                 </Form.Field>
                 <Form.Submit asChild>
                     <button className="w-full font-medium bg-[#5bbce3] hover:bg-[#4aa9d0] text-black py-3 rounded-lg transition-colors">

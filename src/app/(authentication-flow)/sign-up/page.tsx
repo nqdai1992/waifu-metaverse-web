@@ -8,6 +8,7 @@ const SignUpPage = () => {
 
   return (
     <AuthLayout
+      // imageSrc={imageList[Math.floor(Math.random() * imageList.length)]}
       imageSrc={imageList[1]}
       imageAlt="Anime character"
       logoSrc="/Logo.svg"

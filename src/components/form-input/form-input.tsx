@@ -68,7 +68,7 @@ export default function FormInput({ label, type = "text", defaultValue, value, o
 
     return (
         <div className="relative">
-            <div className="w-full bg-[#0c0c10] border border-[#2a2a2a] rounded-2xl px-5 py-4 text-white">
+            <div className={`w-full bg-[#0c0c10] border border-[#353945] rounded-2xl px-5 py-4 text-white`}>
                 <div className="text-[#8a8a8a] text-base font-normal mb-1">{label}</div>
                 <div className="flex">
                     {

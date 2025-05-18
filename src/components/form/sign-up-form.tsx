@@ -80,7 +80,7 @@ const SignUpForm = () => {
                     </button>
                     <div className='flex justify-center'>
                         <Text>Do you have an account?&ensp;</Text>
-                        <Link href="/sign-in" className='text-[#4359A9]'>Sign In</Link>
+                        <Link href="/sign-in" className='!text-[#4359A9]'>Sign In</Link>
                     </div>
                 </div>
             </Form.Root>

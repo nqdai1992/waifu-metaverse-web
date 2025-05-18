@@ -3,15 +3,21 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons"
 import { Link, Text } from "@radix-ui/themes"
 import { useRouter } from "next/navigation"
 import { Form } from "radix-ui"
+import { useState } from "react"
 
 const ForgotPasswordForm = () => {
+    const [email, setEmail] = useState("")
+    const [error, setError] = useState("")
     const router = useRouter();
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         // Handle login logic here
-        console.log("Login submitted")
-        router.push('/reset-password')
+        if (email) {
+            router.push('/reset-password')
+        } else {
+            setError("Please enter the correct email.")
+        }
 
     }
 
@@ -25,8 +31,11 @@ const ForgotPasswordForm = () => {
             <Form.Root className="space-y-6" onSubmit={handleSubmit}>
                 <Form.Field name="email">
                     <Form.Control asChild>
-                        <FormInput label="Email Address" type="email" placeHolder='Enter your email address' />
+                        <FormInput label="Email Address" placeHolder='Enter your email address' onChange={(e) => {
+                            setEmail(e.target.value)
+                        }} />
                     </Form.Control>
+                    {error && <p className="text-[#FF3B30] text-sm mt-3">{error}</p>}
                 </Form.Field>
                 <Form.Submit asChild>
                     <button className="w-full font-medium bg-[#5bbce3] hover:bg-[#4aa9d0] text-black py-3 rounded-lg transition-colors">

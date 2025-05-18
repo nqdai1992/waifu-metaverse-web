@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { CheckIcon } from "@radix-ui/react-icons"
 import { Text } from "@radix-ui/themes"
+import { GradientBackground } from "./styled"
 
 const VerifiedEmail = () => {
   const [animationState, setAnimationState] = useState<"loading" | "success">("loading")
@@ -17,7 +18,7 @@ const VerifiedEmail = () => {
     return () => clearTimeout(timer)
   }, [])
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-[#141416] via-[#060A13] to-[#E11A8F]">
+    <GradientBackground>
       <div className="w-full max-w-100 flex flex-col items-center justify-center text-center gap-17">
         {/* Animated Circle */}
         <div className="relative w-40 h-40">
@@ -54,7 +55,7 @@ const VerifiedEmail = () => {
           Continue
         </Link>
       </div>
-    </div>
+    </GradientBackground>
   )
 }
 
