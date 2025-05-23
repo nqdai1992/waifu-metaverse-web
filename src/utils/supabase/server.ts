@@ -31,9 +31,13 @@ export async function createClient() {
 }
 
 export const getServerSession = async () => {
-  const supabase = await createClient()
-  const res = await supabase.auth.getSession()
-  const session = res.data.session
-
-  return session
+  const supabase = await createClient();
+  try {
+    const res = await supabase.auth.getSession();
+    const session = res.data.session;
+    return session;
+  } catch (error) {
+    console.error("Error fetching server session:", error);
+    return null; // Return a fallback value in case of an error
+  }
 }
