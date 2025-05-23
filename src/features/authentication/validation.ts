@@ -2,15 +2,14 @@ import { z } from 'zod';
 
 // Constants for validation rules
 const PASSWORD_MIN_LENGTH = 8;
-const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 
 // Email validation schema
 export const emailSchema = z.object({
   email: z
     .string()
     .min(1, { message: 'Email is required' })
-    .email({ message: 'Please enter a valid email address' })
-    .regex(EMAIL_REGEX, { message: 'Please enter a valid email address' }),
+    .email({ message: 'Please enter a valid email address' }),
 });
 
 // Password validation schema
