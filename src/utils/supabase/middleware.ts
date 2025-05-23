@@ -3,10 +3,12 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 
 export const PUBLIC_ROUTES = {
-  LOGIN: "/login",
-  REGISTER: "/register",
+  LOGIN: "/sign-in",
+  REGISTER: "/sign-up",
   FORGOT_PASSWORD: "/forgot-password",
   RESET_PASSWORD: "/reset-password",
+  VERIFY_EMAIL: "/verify-email",
+  VERIFIED_EMAIL: "/verified-email",
 };
 
 const publicRoutes = [
@@ -14,6 +16,8 @@ const publicRoutes = [
   PUBLIC_ROUTES.REGISTER,
   PUBLIC_ROUTES.FORGOT_PASSWORD,
   PUBLIC_ROUTES.RESET_PASSWORD,
+  PUBLIC_ROUTES.VERIFY_EMAIL,
+  PUBLIC_ROUTES.VERIFIED_EMAIL,
 ];
 
 export async function updateSession(request: NextRequest) {
