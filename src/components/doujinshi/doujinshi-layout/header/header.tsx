@@ -50,7 +50,7 @@ const DoujinshiHeader = () => {
                         <div className="flex items-center justify-center text-white cursor-pointer" onClick={handleLogoClick}>
                             {/* Angel/Winged figure logo */}
                             <Image
-                                src={"/Header-logo.svg"}
+                                src={"/header-logo.svg"}
                                 alt={'logo'}
                                 width={57}
                                 height={51}
@@ -103,7 +103,7 @@ const DoujinshiHeader = () => {
                             className="!p-0 items-center cursor-pointer"
                         >
                             <Image
-                                src={"/Mock/Mock-header-avatar.svg"}
+                                src={"/mock/mock-header-avatar.svg"}
                                 alt={'logo'}
                                 width={54}
                                 height={54}

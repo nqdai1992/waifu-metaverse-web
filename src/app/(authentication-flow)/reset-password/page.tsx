@@ -6,9 +6,9 @@ import ResetPasswordForm from '../../../components/form/reset-password-form';
 const ResetPasswordPage = () => {
   return (
     <AuthLayout
-      imageSrc='/ResetPassword.svg'
+      imageSrc='/reset-password.svg'
       imageAlt="Anime character"
-      logoSrc="/Logo.svg"
+      logoSrc="/logo.svg"
       logoAlt="Logo icon"
     >
       <ResetPasswordForm />

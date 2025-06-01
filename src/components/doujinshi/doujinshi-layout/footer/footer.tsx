@@ -28,7 +28,7 @@ const DoujinshiFooter = () => {
               <div className="flex items-center mb-4">
                 <div className="flex justify-center lg:justify-start">
                   <Image
-                    src={"/Logo.svg"}
+                    src={"/logo.svg"}
                     alt={'logo'}
                     width={107}
                     height={51}

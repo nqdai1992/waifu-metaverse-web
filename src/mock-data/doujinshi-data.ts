@@ -6,7 +6,7 @@ export const popularItems: IDoujinshiDetail[] = [
     title:
       "[クロミ] 新作 異世界の出会いを大切にしました。ましたた。た。た。た。",
     thumbnail:
-      "/mock/[クロミ] 新作 異世界の出会いを大切にしました。ましたた。た。た。た。.jpg",
+      "/mock/kuromi-isekai-deai.jpg",
     liked: false,
     pageTotal: 24,
     pages: [
@@ -19,7 +19,7 @@ export const popularItems: IDoujinshiDetail[] = [
   {
     id: 2,
     title: "[Scarlett Ann] JASHIN Reunion [English]",
-    thumbnail: "/mock/[Scarlett Ann] JASHIN Reunion [English].jpg",
+    thumbnail: "/mock/scarlett-ann-jashin-reunion.jpg",
     liked: true,
     pageTotal: 32,
     pages: [
@@ -32,7 +32,7 @@ export const popularItems: IDoujinshiDetail[] = [
   {
     id: 3,
     title: "[COMICTOU] NakamotoAyaSeiyaku",
-    thumbnail: "/mock/[COMICTOU] NakamotoAyaSeiyaku.jpg",
+    thumbnail: "/mock/comictou-nakamoto-aya-seiyaku.jpg",
     liked: false,
     pageTotal: 18,
     pages: [
@@ -44,7 +44,7 @@ export const popularItems: IDoujinshiDetail[] = [
   {
     id: 4,
     title: "Werewolf [Tokoro Soku] Koi (Futari wa Precure)",
-    thumbnail: "/mock/Werewolf [Tokoro Soku] Koi (Futari wa Precure).png",
+    thumbnail: "/mock/werewolf-koi-precure.png",
     liked: true,
     pageTotal: 28,
     pages: [
@@ -58,7 +58,7 @@ export const popularItems: IDoujinshiDetail[] = [
   {
     id: 5,
     title: "フリーレン 4",
-    thumbnail: "/mock/フリーレン 4.jpg",
+    thumbnail: "/mock/frieren-4.jpg",
     liked: false,
     pageTotal: 22,
     pages: [
@@ -72,7 +72,7 @@ export const popularItems: IDoujinshiDetail[] = [
     title:
       "[Momonomi Plus (Momonomi)] Hahaoya Damasite Musume Tyoukyou [Digital]",
     thumbnail:
-      "/mock/[Momonomi Plus (Momonomi)] Hahaoya Damasite Musume Tyoukyou [Digital].jpg",
+      "/mock/momonomi-plus-hahaoya-damasite.jpg",
     liked: false,
     pageTotal: 16,
     pages: [
@@ -85,7 +85,7 @@ export const popularItems: IDoujinshiDetail[] = [
     title:
       "[Over.J & Choi TaeYoung] Family with Benefits [Ch. 1- 49.5] [English] [The Blank] [On Hiatus]",
     thumbnail:
-      "/mock/[Over.J & Choi TaeYoung] Family with Benefits [Ch. 1- 49.5] [English] [The Blank] [On Hiatus].jpg",
+      "/mock/overj-choi-family-with-benefits.jpg",
     liked: false,
     pageTotal: 30,
     pages: [
@@ -104,7 +104,7 @@ export const newUploads: IDoujinshiDetail[] = [
     title:
       "[ie] Kouseinou AI Sexaroid  Highly Advanced Sex Android [English] [CarlJPTL]",
     thumbnail:
-      "/mock/[ie] Kouseinou AI Sexaroid  Highly Advanced Sex Android [English] [CarlJPTL].jpg",
+      "/mock/ie-kouseinou-ai-sexaroid.jpg",
     liked: true,
     pageTotal: 26,
     pages: [
@@ -117,7 +117,7 @@ export const newUploads: IDoujinshiDetail[] = [
   {
     id: 9,
     title: "Demon (♂) vs Angel (♂) Battle ",
-    thumbnail: "/mock/Demon (♂) vs Angel (♂) Battle .jpg",
+    thumbnail: "/mock/demon-vs-angel-battle.jpg",
     liked: true,
     pageTotal: 26,
     pages: [
@@ -132,7 +132,7 @@ export const newUploads: IDoujinshiDetail[] = [
     title:
       "[Aweida] Iincho no Kuse ni Yuri Sex Chou Umakute Maji  Mukatsuku  She's Crazy Good at Yuri Sex Despite Being the Student President and it Seriously Pisses Me Off [English] [Pangean]    ",
     thumbnail:
-      "/mock/[Aweida] Iincho no Kuse ni Yuri Sex Chou Umakute Maji  Mukatsuku  She's Crazy Good at Yuri Sex Despite Being the Student President and it Seriously Pisses Me Off [English] [Pangean]    .jpg",
+      "/mock/aweida-iincho-yuri-sex.jpg",
     liked: false,
     pageTotal: 26,
     pages: [
@@ -145,7 +145,7 @@ export const newUploads: IDoujinshiDetail[] = [
   {
     id: 11,
     title: "[Hoshara] Seigi no Mikata！(Higuchi Kaede)",
-    thumbnail: "/mock/[Hoshara] Seigi no Mikata！(Higuchi Kaede).jpg",
+    thumbnail: "/mock/hoshara-seigi-no-mikata.jpg",
     liked: false,
     pages: [
       "/placeholder.svg?height=400&width=300",
@@ -157,7 +157,7 @@ export const newUploads: IDoujinshiDetail[] = [
   {
     id: 12,
     title: "[Yuunabe Shinkouchuu (Tanabe Kyou)] Gakkou Tokidoki Sex Ya-san [Digital]  ",
-    thumbnail: "/mock/[Yuunabe Shinkouchuu (Tanabe Kyou)] Gakkou Tokidoki Sex Ya-san [Digital]  .jpg",
+    thumbnail: "/mock/yuunabe-gakkou-tokidoki-sex.jpg",
     liked: false,
     pages: [
       "/placeholder.svg?height=400&width=300",
@@ -169,7 +169,7 @@ export const newUploads: IDoujinshiDetail[] = [
   {
     id: 13,
     title: "[Yuunabe Shinkouchuu (Tanabe Kyou)] Loli Combi Ecchi cat x vamp (Bakemonogatari) [Digital]   ",
-    thumbnail: "/mock/[Yuunabe Shinkouchuu (Tanabe Kyou)] Loli Combi Ecchi cat x vamp (Bakemonogatari) [Digital]   .jpg",
+    thumbnail: "/mock/yuunabe-loli-combi-ecchi-bakemonogatari.jpg",
     liked: true,
     pageTotal: 13,
     pages: [
@@ -182,18 +182,18 @@ export const newUploads: IDoujinshiDetail[] = [
 ];
 
 export const mockListDetailDoujinshiPages = [
-  '/Mock/mock detail/detail-1.png',
-  '/Mock/mock detail/detail-2.png',
-  '/Mock/mock detail/detail-3.png',
-  '/Mock/mock detail/detail-4.png',
-  '/Mock/mock detail/detail-5.png',
-  '/Mock/mock detail/detail-6.png',
-  '/Mock/mock detail/detail-7.png',
-  '/Mock/mock detail/detail-8.png',
-  '/Mock/mock detail/detail-9.png',
-  '/Mock/mock detail/detail-10.png',
-  '/Mock/mock detail/detail-11.png',
-  '/Mock/mock detail/detail-12.png',
-  '/Mock/mock detail/detail-13.png',
-  '/Mock/mock detail/detail-14.png',
+  '/mock/mock-detail/detail-1.png',
+  '/mock/mock-detail/detail-2.png',
+  '/mock/mock-detail/detail-3.png',
+  '/mock/mock-detail/detail-4.png',
+  '/mock/mock-detail/detail-5.png',
+  '/mock/mock-detail/detail-6.png',
+  '/mock/mock-detail/detail-7.png',
+  '/mock/mock-detail/detail-8.png',
+  '/mock/mock-detail/detail-9.png',
+  '/mock/mock-detail/detail-10.png',
+  '/mock/mock-detail/detail-11.png',
+  '/mock/mock-detail/detail-12.png',
+  '/mock/mock-detail/detail-13.png',
+  '/mock/mock-detail/detail-14.png',
 ]

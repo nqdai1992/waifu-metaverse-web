@@ -22,14 +22,14 @@ const SignUpFormFallback = () => (
 );
 
 const SignUpPage = () => {
-  const imageList = ["/SignUp-1.svg", "/SignUp-2.svg"]
+  const imageList = ["/sign-up-1.svg", "/sign-up-2.svg"]
 
   return (
     <AuthLayout
       // imageSrc={imageList[Math.floor(Math.random() * imageList.length)]}
       imageSrc={imageList[1]}
       imageAlt="Anime character"
-      logoSrc="/Logo.svg"
+      logoSrc="/logo.svg"
       logoAlt="Logo icon"
     >
       <Suspense fallback={<SignUpFormFallback />}>
