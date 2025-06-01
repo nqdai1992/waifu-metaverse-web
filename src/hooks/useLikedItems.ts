@@ -1,6 +1,7 @@
 "use client"
 
-import { IDoujinshiDetail } from "@/mock-data/doujinshi-data"
+
+import { IDoujinshiDetail } from "@/components/doujinshi/doujinshi-card/doujinshi-card"
 import { useState } from "react"
 
 
