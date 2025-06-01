@@ -23,9 +23,9 @@ const SignInFormFallback = () => (
 const SignInPage = () => {
   return (
     <AuthLayout
-      imageSrc="/SignIn.svg"
+      imageSrc="/sign-in.svg"
       imageAlt="Anime character"
-      logoSrc="/Logo.svg"
+      logoSrc="/logo.svg"
       logoAlt="Logo icon"
     >
       <Suspense fallback={<SignInFormFallback />}>

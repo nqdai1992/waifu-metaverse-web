@@ -111,7 +111,7 @@ const DoujinshiDetail = ({ item, isLiked, onToggleLike }: DoujinshiDetailProps) 
                     </ActionButton>
 
                     <ActionButton variant="secondary" onClick={handleDownload}>
-                        <Image src={"/Download-icon.svg"} alt="Download" width={21.6} height={21.6} />
+                        <Image src={"/download-icon.svg"} alt="Download" width={21.6} height={21.6} />
                         Download
                     </ActionButton>
                 </ActionButtons>

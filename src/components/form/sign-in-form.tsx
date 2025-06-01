@@ -208,7 +208,7 @@ const SignInForm = () => {
           disabled={isLoading || isGoogleLoading}
         >
           <Image
-            src="/Google-icon.svg"
+            src="/google-icon.svg"
             alt="Google icon"
             width={24}
             height={24}

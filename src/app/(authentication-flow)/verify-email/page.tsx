@@ -54,9 +54,9 @@ const VerifyEmailPage = () => {
 
   return (
     <AuthLayout
-      imageSrc="/VerifyEmail-1.svg"
+      imageSrc="/verify-email-1.svg"
       imageAlt="Anime character"
-      logoSrc="/Logo.svg"
+      logoSrc="/logo.svg"
       logoAlt="Logo icon"
     >
       {isVerifying ? (
