@@ -4,9 +4,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   
   images: {
-    domains: ["localhost", "waifu-metaverse-web.vercel.app"],
+    domains: ["localhost", "9fDeOMRF8RcfTt1w.public.blob.vercel-storage.com"],
     remotePatterns: [
-      { hostname: "public.blob.vercel-storage.com" },
+      { hostname: "9fDeOMRF8RcfTt1w.public.blob.vercel-storage.com" },
     ]
   }
 };
