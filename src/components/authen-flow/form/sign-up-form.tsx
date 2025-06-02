@@ -1,11 +1,12 @@
 import FormInput from "@/components/authen-flow/form-input/form-input";
 import { signup } from "@/features/authentication/sign-up.action";
+import { signInWithProvider } from "@/features/authentication/sign-in-with-provider.action";
 import { signUpSchema } from "@/features/authentication/validation";
 import { Link, Text } from "@radix-ui/themes";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Form } from "radix-ui";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 
 // Color constants - used for consistent styling
@@ -21,12 +22,26 @@ const COLORS = {
 
 const SignUpForm = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState<{ email?: string; password?: string; confirmPassword?: string }>({});
   const [serverError, setServerError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+
+  // Check for OAuth errors in URL parameters
+  useEffect(() => {
+    try {
+      const error = searchParams?.get('error');
+      if (error === 'oauth_error') {
+        setServerError('Google sign-up failed. Please try again or use email/password.');
+      }
+    } catch {
+      // Ignore errors in test environment where searchParams might not be available
+    }
+  }, [searchParams]);
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -114,6 +129,25 @@ const SignUpForm = () => {
     }
   };
 
+  const handleGoogleSignUp = async () => {
+    try {
+      setIsGoogleLoading(true);
+      setServerError(""); // Clear any existing errors
+
+      // Call the OAuth sign-in action with Google provider
+      // Note: For OAuth, sign-up and sign-in use the same flow
+      await signInWithProvider("google");
+
+      // Note: If successful, the user will be redirected to Google OAuth
+      // and then back to our callback URL, so we won't reach this point
+    } catch (error) {
+      console.error("Google sign-up error:", error);
+      setServerError("Failed to initiate Google sign-up. Please try again.");
+    } finally {
+      setIsGoogleLoading(false);
+    }
+  };
+
   return (
     <>
       <div className="flex flex-col gap-3">
@@ -187,16 +221,17 @@ const SignUpForm = () => {
 
           <button
             type="button"
+            onClick={handleGoogleSignUp}
             className={`w-full flex items-center justify-center bg-transparent border border-[${COLORS.BORDER}] text-white font-medium py-3 rounded-lg hover:bg-[${COLORS.HOVER_BG}] transition-colors gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:bg-transparent`}
-            disabled={isLoading}
+            disabled={isLoading || isGoogleLoading}
           >
             <Image
-              src="/Google-icon.svg"
+              src="/google-icon.svg"
               alt="Google icon"
               width={24}
               height={24}
             />
-            Sign Up with Google
+            {isGoogleLoading ? "Signing Up with Google..." : "Sign Up with Google"}
           </button>
           <div className="flex justify-center">
             <Text className={`text-[${COLORS.TEXT_SECONDARY}]`}>Do you have an account?&ensp;</Text>

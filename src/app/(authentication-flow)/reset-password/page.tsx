@@ -6,9 +6,9 @@ import ResetPasswordForm from '../../../components/authen-flow/form/reset-passwo
 const ResetPasswordPage = () => {
   return (
     <AuthLayout
-      imageSrc='/ResetPassword.svg'
+      imageSrc='/reset-password.svg'
       imageAlt="Anime character"
-      logoSrc="/Logo.svg"
+      logoSrc="/logo.svg"
       logoAlt="Logo icon"
     >
       <ResetPasswordForm />

@@ -53,7 +53,7 @@ const EnterCodeForm = ({ onSubmit, email = "" }: EnterCodeFormProps) => {
                 const token = code.join('');
 
                 // Call the verification function
-                const { data, error } = await verifyConfirmationOtp({
+                const { error } = await verifyConfirmationOtp({
                     email,
                     token
                 });

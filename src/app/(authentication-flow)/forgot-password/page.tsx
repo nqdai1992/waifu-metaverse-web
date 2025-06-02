@@ -6,9 +6,9 @@ import ForgotPasswordForm from '../../../components/authen-flow/form/forgot-pass
 const ForgotPasswordPage = () => {
   return (
     <AuthLayout
-      imageSrc='/ForgotPassword.svg'
+      imageSrc='/forgot-password.svg'
       imageAlt="Anime character"
-      logoSrc="/Logo.svg"
+      logoSrc="/logo.svg"
       logoAlt="Logo icon"
     >
       <ForgotPasswordForm />

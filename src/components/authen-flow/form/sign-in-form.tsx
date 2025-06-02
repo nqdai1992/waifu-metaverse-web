@@ -1,21 +1,36 @@
 import FormInput from "@/components/authen-flow/form-input/form-input";
 import { signIn } from "@/features/authentication/sign-in.action";
+import { signInWithProvider } from "@/features/authentication/sign-in-with-provider.action";
 import { signInSchema } from "@/features/authentication/validation";
 import { CheckIcon } from "@radix-ui/react-icons";
 import { Link, Text } from "@radix-ui/themes";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Checkbox, Form } from "radix-ui";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 
 const SignInForm = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
   const [serverError, setServerError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+
+  // Check for OAuth errors in URL parameters
+  useEffect(() => {
+    try {
+      const error = searchParams?.get('error');
+      if (error === 'oauth_error') {
+        setServerError('Google sign-in failed. Please try again or use email/password.');
+      }
+    } catch {
+      // Ignore errors in test environment where searchParams might not be available
+    }
+  }, [searchParams]);
 
   const validateForm = () => {
     try {
@@ -94,6 +109,24 @@ const SignInForm = () => {
     }
   };
 
+  const handleGoogleSignIn = async () => {
+    try {
+      setIsGoogleLoading(true);
+      setServerError(""); // Clear any existing errors
+
+      // Call the OAuth sign-in action with Google provider
+      await signInWithProvider("google");
+
+      // Note: If successful, the user will be redirected to Google OAuth
+      // and then back to our callback URL, so we won't reach this point
+    } catch (error) {
+      console.error("Google sign-in error:", error);
+      setServerError("Failed to initiate Google sign-in. Please try again.");
+    } finally {
+      setIsGoogleLoading(false);
+    }
+  };
+
   return (
     <>
       <div className="flex flex-col gap-3">
@@ -154,9 +187,9 @@ const SignInForm = () => {
               Remember for 30 days
             </label>
           </div>
-          <Link href="/forgot-password" className="text-sm !text-[#4359A9]">
+          {/* <Link href="/forgot-password" className="text-sm !text-[#4359A9]">
             Forgot password
-          </Link>
+          </Link> */}
         </div>
 
         <Form.Submit asChild>
@@ -170,16 +203,17 @@ const SignInForm = () => {
 
         <button
           type="button"
+          onClick={handleGoogleSignIn}
           className="w-full flex items-center justify-center bg-transparent border border-[#333] text-white font-medium py-3 rounded-lg hover:bg-[#222] transition-colors gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:bg-transparent"
-          disabled={isLoading}
+          disabled={isLoading || isGoogleLoading}
         >
           <Image
-            src="/Google-icon.svg"
+            src="/google-icon.svg"
             alt="Google icon"
             width={24}
             height={24}
           />
-          Sign In with Google
+          {isGoogleLoading ? "Signing In with Google..." : "Sign In with Google"}
         </button>
         <div className="flex justify-center">
           <Text>Don&apos;t have an account?&ensp;</Text>

@@ -4,7 +4,7 @@ import { IDoujinshiDetail } from "@/components/doujinshi/doujinshi-card/doujinsh
 import DoujinshiLayout from "@/components/doujinshi/doujinshi-layout/doujinshi-layout";
 import GridSection from "@/components/doujinshi/grid-section/grid-section";
 import HorizontalScrollSection from "@/components/doujinshi/horizontal-scroll-section/horizontal-scroll-section";
-import { useLikedItems } from "@/hooks/useLikedItems";
+import { useLikedItems } from "@/hooks/use-liked-items";
 import { newUploads, popularItems } from "@/mock-data/doujinshi-data";
 import { useRouter } from "next/navigation";
 
