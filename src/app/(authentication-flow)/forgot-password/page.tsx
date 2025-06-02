@@ -1,7 +1,7 @@
 "use client"
 
-import AuthLayout from '@/components/auth-layout/auth-layout';
-import ForgotPasswordForm from '../../../components/form/forgot-password-form';
+import AuthLayout from '@/components/authen-flow/auth-layout/auth-layout';
+import ForgotPasswordForm from '../../../components/authen-flow/form/forgot-password-form';
 
 const ForgotPasswordPage = () => {
   return (

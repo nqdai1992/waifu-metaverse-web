@@ -1,4 +1,4 @@
-import FormInput from "@/components/form-input/form-input"
+import FormInput from "@/components/authen-flow/form-input/form-input"
 import { ArrowLeftIcon } from "@radix-ui/react-icons"
 import { Link, Text } from "@radix-ui/themes"
 import { useRouter } from "next/navigation"

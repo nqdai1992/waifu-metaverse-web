@@ -1,4 +1,4 @@
-import RoundIconButton from "@/components/round-icon-button/round-icon-button";
+import RoundIconButton from "@/components/doujinshi/round-icon-button/round-icon-button";
 import { BellIcon, CaretDownIcon, DragHandleDots2Icon, HamburgerMenuIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -25,7 +25,7 @@ const DoujinshiHeader = () => {
     };
 
     const handleProfileClick = (): void => {
-        console.log('Profile clicked');
+        router.push(`/profile/edit`)
     };
 
     const handleLogoClick = (): void => {

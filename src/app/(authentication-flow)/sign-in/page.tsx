@@ -1,7 +1,7 @@
 "use client"
 
-import AuthLayout from '@/components/auth-layout/auth-layout';
-import SignInForm from '../../../components/form/sign-in-form';
+import AuthLayout from '@/components/authen-flow/auth-layout/auth-layout';
+import SignInForm from '../../../components/authen-flow/form/sign-in-form';
 
 const SignInPage = () => {
 

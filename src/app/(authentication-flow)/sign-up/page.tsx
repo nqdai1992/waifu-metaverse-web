@@ -1,7 +1,7 @@
 "use client"
 
-import AuthLayout from '@/components/auth-layout/auth-layout';
-import SignUpForm from '../../../components/form/sign-up-form';
+import AuthLayout from '@/components/authen-flow/auth-layout/auth-layout';
+import SignUpForm from '../../../components/authen-flow/form/sign-up-form';
 
 const SignUpPage = () => {
   const imageList = ["/SignUp-1.svg", "/SignUp-2.svg"]

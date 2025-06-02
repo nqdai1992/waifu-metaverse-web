@@ -1,4 +1,4 @@
-import FormInput from "@/components/form-input/form-input";
+import FormInput from "@/components/authen-flow/form-input/form-input";
 import { signIn } from "@/features/authentication/sign-in.action";
 import { signInSchema } from "@/features/authentication/validation";
 import { CheckIcon } from "@radix-ui/react-icons";

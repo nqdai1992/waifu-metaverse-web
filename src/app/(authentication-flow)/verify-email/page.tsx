@@ -1,7 +1,7 @@
 "use client";
 
-import AuthLayout from "@/components/auth-layout/auth-layout";
-import EnterCodeForm from "@/components/form/enter-code-form";
+import AuthLayout from "@/components/authen-flow/auth-layout/auth-layout";
+import EnterCodeForm from "@/components/authen-flow/form/enter-code-form";
 import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
