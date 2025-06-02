@@ -8,7 +8,7 @@ import { useLikedItems } from "@/hooks/useLikedItems";
 import { newUploads, popularItems } from "@/mock-data/doujinshi-data";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
-import { mockListDetailDoujinshiPages } from "../../../mock-data/doujinshi-data";
+import { mockListDetailDoujinshiPages } from "../../../../mock-data/doujinshi-data";
 
 
 const DoujinshiDetailPage = () => {
