@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   
   images: {
-    unoptimized: true
+    domains: ["localhost", "waifu-metaverse-web.vercel.app"],
   }
 };
 
