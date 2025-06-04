@@ -1,4 +1,4 @@
-import FormInput from "@/components/form-input/form-input";
+import FormInput from "@/components/authen-flow/form-input/form-input";
 import { signup } from "@/features/authentication/sign-up.action";
 import { signInWithProvider } from "@/features/authentication/sign-in-with-provider.action";
 import { signUpSchema } from "@/features/authentication/validation";
