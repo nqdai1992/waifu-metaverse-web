@@ -1,8 +1,9 @@
 import RoundIconButton from "@/components/doujinshi/round-icon-button/round-icon-button";
-import { BellIcon, CaretDownIcon, DragHandleDots2Icon, HamburgerMenuIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { BellIcon, DragHandleDots2Icon, HamburgerMenuIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import UserAvatarDropdown from "@/components/doujinshi/doujinshi-layout/header/user-avatar-dropdown";
 
 const DoujinshiHeader = () => {
     const [searchQuery, setSearchQuery] = useState<string>('');
@@ -22,10 +23,6 @@ const DoujinshiHeader = () => {
 
     const handleNotificationClick = (): void => {
         console.log('Notification clicked');
-    };
-
-    const handleProfileClick = (): void => {
-        router.push(`/profile/edit`)
     };
 
     const handleLogoClick = (): void => {
@@ -96,23 +93,7 @@ const DoujinshiHeader = () => {
                         <BellIcon className="w-6 h-6" />
                     </RoundIconButton>
 
-                    <div className="flex items-center gap-2 cursor-pointer">
-                        <RoundIconButton
-                            onClick={handleProfileClick}
-                            aria-label="avata"
-                            className="!p-0 items-center cursor-pointer"
-                        >
-                            <Image
-                                src={"/mock/mock-header-avatar.svg"}
-                                alt={'logo'}
-                                width={54}
-                                height={54}
-                                className="object-cover h-full w-full"
-                                priority
-                            />
-                        </RoundIconButton>
-                        <CaretDownIcon className="w-6 h-6" />
-                    </div>
+                    <UserAvatarDropdown />
                 </div>
             </div>
         </header>
