@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { CodeInput } from "@/components/authen-flow/code-input/code-input"
 import { verifyConfirmationOtp } from "@/features/authentication/verify-confirmation-otp.action"
 import { ArrowLeftIcon } from "@radix-ui/react-icons"
