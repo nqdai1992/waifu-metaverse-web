@@ -58,7 +58,7 @@ export async function GET() {
     }
     
     return NextResponse.json({ profile }, { status: 200 })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
@@ -89,8 +89,8 @@ export async function PUT(request: Request) {
     
     for (const [key, value] of Object.entries(updates)) {
       if (allowedFields.includes(key)) {
-        if (value !== null) {
-          sanitizedUpdates[key as keyof Profile] = value
+        if (value !== null && value !== undefined) {
+          sanitizedUpdates[key as keyof Profile] = value as string
         }
       }
     }
@@ -113,7 +113,7 @@ export async function PUT(request: Request) {
     }
 
     return NextResponse.json({ profile: data }, { status: 200 })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
