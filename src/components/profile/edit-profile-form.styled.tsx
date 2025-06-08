@@ -122,10 +122,14 @@ export const SaveButton = styled.button`
   display: flex;
   align-items: center;
   transition: background-color 0.2s ease;
-  margin-bottom: 30px;
-  margin-right: 30px;
+  border: none;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: #f3ee4c;
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `

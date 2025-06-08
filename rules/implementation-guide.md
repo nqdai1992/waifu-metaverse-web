@@ -25,5 +25,3 @@
   - Follow React best practices for component composition and state management
   - Always split to smaller components for reusability
   - Apply the folder-per-page pattern consistently across all new pages
-- **Data Management**:
-  - **Extract demo/mock/real data into custom React hooks**: Always separate demo/mock data from component presentation logic by creating dedicated custom hooks (e.g., `useRoadmapData`, `useSampleGoals`). Place these hooks in a `hooks/` subdirectory within the component folder following the folder-per-page architecture. This improves code organization, maintainability, and reusability while keeping components focused on rendering logic.

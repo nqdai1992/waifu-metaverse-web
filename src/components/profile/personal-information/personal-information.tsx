@@ -16,6 +16,7 @@ interface PersonalData {
   fullName: string
   emailAddress: string
   phoneNumber: string
+  username?: string
 }
 
 interface PersonalInformationProps {
@@ -52,8 +53,9 @@ const PersonalInformation = ({ isEditing, data, onEditToggle, onDataChange }: Pe
             <Input
               type="email"
               value={data.emailAddress}
-              onChange={(e) => onDataChange("emailAddress", e.target.value)}
-              placeholder="Enter your email"
+              disabled
+              className="opacity-60 cursor-not-allowed"
+              placeholder="Email cannot be changed"
             />
           </FormField>
           <FormField>
@@ -68,17 +70,23 @@ const PersonalInformation = ({ isEditing, data, onEditToggle, onDataChange }: Pe
         </FormGrid>
       ) : (
         <FormGrid>
-          <FormField>
-            <FieldLabel>User Name</FieldLabel>
-            <FieldValue>Jen_wilson1210</FieldValue>
-          </FormField>
+          {data.username && (
+            <FormField>
+              <FieldLabel>User Name</FieldLabel>
+              <FieldValue>{data.username}</FieldValue>
+            </FormField>
+          )}
           <FormField>
             <FieldLabel>Full Name</FieldLabel>
-            <FieldValue>{data.fullName}</FieldValue>
+            <FieldValue>{data.fullName || 'Not set'}</FieldValue>
           </FormField>
           <FormField>
             <FieldLabel>Email Address</FieldLabel>
             <FieldValue>{data.emailAddress}</FieldValue>
+          </FormField>
+          <FormField>
+            <FieldLabel>Phone Number</FieldLabel>
+            <FieldValue>{data.phoneNumber || 'Not set'}</FieldValue>
           </FormField>
         </FormGrid>
       )}

@@ -47,7 +47,12 @@ export const UploadButton = styled.button`
   align-items: center;
   transition: background-color 0.2s ease;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `

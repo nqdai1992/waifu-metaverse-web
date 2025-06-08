@@ -2,12 +2,12 @@
 
 import styled from "styled-components"
 
-export const BioText = styled.p<{ isexpanded: string }>`
+export const BioText = styled.p<{ isExpanded: boolean }>`
   color: rgb(209, 213, 219);
   font-size: 14px;
   line-height: 1.6;
   ${(props) =>
-    props.isexpanded !== 'true' &&
+    !props.isExpanded &&
     `
     display: -webkit-box;
     -webkit-line-clamp: 5;

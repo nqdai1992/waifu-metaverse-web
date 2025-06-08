@@ -7,10 +7,12 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { CaretDownIcon, PersonIcon, ExitIcon } from "@radix-ui/react-icons";
 import RoundIconButton from "@/components/doujinshi/round-icon-button/round-icon-button";
 import signOut from "@/features/authentication/sign-out.action";
+import { useProfile } from "@/features/profile/profile.context";
 
 const UserAvatarDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const { profile } = useProfile();
 
   const handleProfileClick = () => {
     setIsOpen(false);
@@ -41,8 +43,8 @@ const UserAvatarDropdown = () => {
             className="!p-0 items-center cursor-pointer"
           >
             <Image
-              src="/mock/mock-header-avatar.svg"
-              alt="User avatar"
+              src={profile?.avatar_url || "/mock/mock-header-avatar.svg"}
+              alt={profile?.username || "User avatar"}
               width={54}
               height={54}
               className="object-cover h-full w-full"
@@ -73,7 +75,9 @@ const UserAvatarDropdown = () => {
             }}
           >
             <PersonIcon className="w-5 h-5 text-[#8a8a8a]" />
-            <span className="text-base font-medium">Profile</span>
+            <span className="text-base font-medium">
+              {profile?.username || "Profile"}
+            </span>
           </DropdownMenu.Item>
 
           <DropdownMenu.Separator className="h-px bg-[#353945] my-1" />

@@ -21,7 +21,6 @@ const BioSection = ({ isEditing, bio, onEditToggle, onBioChange }: BioSectionPro
 
   // Check if bio text needs "Read More" (simple check based on length)
   const needsReadMore = bio.length > 250
-  console.log('needsReadMore && !isBioExpanded', needsReadMore && !isBioExpanded)
 
   return (
     <div className="border border-[#353945] rounded-xl p-7.5 flex flex-col gap-5">
@@ -39,7 +38,7 @@ const BioSection = ({ isEditing, bio, onEditToggle, onBioChange }: BioSectionPro
         </FormField>
       ) : (
         <div>
-          <BioText isexpanded={isBioExpanded.toString()}>
+          <BioText isExpanded={isBioExpanded}>
             {bio}
           </BioText>
           {needsReadMore && !isBioExpanded && (
