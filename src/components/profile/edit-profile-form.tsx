@@ -168,10 +168,14 @@ const EditProfileForm = () => {
                         fullName: profileData.fullName,
                         emailAddress: profileData.emailAddress,
                         phoneNumber: profileData.phoneNumber,
-                        username: profile?.username,
+                        username: profile?.username ?? undefined,
                     }}
                     onEditToggle={() => setIsEditingPersonal(!isEditingPersonal)}
-                    onDataChange={handlePersonalDataChange}
+                    onDataChange={(field, value) => {
+                        if (field !== 'username') {
+                            handlePersonalDataChange(field as keyof Omit<ProfileData, "bio">, value)
+                        }
+                    }}
                 />
 
                 <BioSection
