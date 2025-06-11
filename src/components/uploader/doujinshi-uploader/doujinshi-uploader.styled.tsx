@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const ContentWrapper = styled.div`
-  min-height: 100vh;
   color: white;
 `
 
@@ -28,7 +27,6 @@ export const MainLayout = styled.div`
 
 export const MainContentWrapper = styled.div`
   flex: 1;
-  height: 100%;
 `
 
 export const MainContent = styled.div`

@@ -10,7 +10,7 @@ const DoujinshiPage = () => {
     return (
         <DoujinshiLayout >
             <div className="space-y-12.5 py-12.5">
-                <div className="text-[22px] font-semibold text-[#FCFCFD]">Edit Profile</div>
+                <div className="text-3xl font-semibold text-[#FCFCFD]">Edit Profile</div>
                 <EditProfileForm />
             </div>
         </DoujinshiLayout>

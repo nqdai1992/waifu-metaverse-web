@@ -44,7 +44,7 @@ export const DialogInput = styled.input`
   outline: none;
   
   &:focus {
-    border-color: #8b5cf6;
+    border-color: #55D2FB;
   }
   
   &::placeholder {
@@ -73,8 +73,9 @@ export const CancelButton = styled.button`
 `
 
 export const AddButton = styled.button`
-  background-color: #7c3aed;
-  color: white;
+  background-color: #55D2FB;
+  color: black;
+  font-weight: 500;
   border: none;
   border-radius: 0.75rem;
   padding: 0.5rem 1rem;
@@ -82,6 +83,6 @@ export const AddButton = styled.button`
   transition: background-color 0.2s ease;
   
   &:hover {
-    background-color: #6d28d9;
+    background-color: #04aee5;
   }
 `
