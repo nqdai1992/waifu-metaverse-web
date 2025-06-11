@@ -1,0 +1,57 @@
+import { Chapter } from "@/components/uploader/doujinshi-uploader/types";
+
+export const initialChapters: Chapter[] = [
+  {
+    id: 1,
+    title: "Chapter 1",
+    images: [
+      { id: "1-1", name: "Page 001", url: "/placeholder.svg?height=400&width=300", order: 1 },
+      { id: "1-2", name: "Page 002", url: "/placeholder.svg?height=400&width=300", order: 2 },
+      { id: "1-3", name: "Page 003", url: "/placeholder.svg?height=400&width=300", order: 3 },
+      { id: "1-4", name: "Page 004", url: "/placeholder.svg?height=400&width=300", order: 4 },
+      { id: "1-5", name: "Page 005", url: "/placeholder.svg?height=400&width=300", order: 5 },
+      { id: "1-6", name: "Page 006", url: "/placeholder.svg?height=400&width=300", order: 6 },
+      { id: "1-7", name: "Page 007", url: "/placeholder.svg?height=400&width=300", order: 7 },
+      { id: "1-8", name: "Page 008", url: "/placeholder.svg?height=400&width=300", order: 8 },
+      { id: "1-9", name: "Page 009", url: "/placeholder.svg?height=400&width=300", order: 9 },
+      { id: "1-10", name: "Page 010", url: "/placeholder.svg?height=400&width=300", order: 10 },
+      { id: "1-11", name: "Page 011", url: "/placeholder.svg?height=400&width=300", order: 11 },
+      { id: "1-12", name: "Page 012", url: "/placeholder.svg?height=400&width=300", order: 12 },
+    ],
+  },
+  {
+    id: 2,
+    title: "Chapter 2",
+    images: [
+      { id: "2-1", name: "Page 001", url: "/placeholder.svg?height=400&width=300", order: 1 },
+      { id: "2-2", name: "Page 002", url: "/placeholder.svg?height=400&width=300", order: 2 },
+      { id: "2-3", name: "Page 003", url: "/placeholder.svg?height=400&width=300", order: 3 },
+      { id: "2-4", name: "Page 004", url: "/placeholder.svg?height=400&width=300", order: 4 },
+      { id: "2-5", name: "Page 005", url: "/placeholder.svg?height=400&width=300", order: 5 },
+      { id: "2-6", name: "Page 006", url: "/placeholder.svg?height=400&width=300", order: 6 },
+      { id: "2-7", name: "Page 007", url: "/placeholder.svg?height=400&width=300", order: 7 },
+      { id: "2-8", name: "Page 008", url: "/placeholder.svg?height=400&width=300", order: 8 },
+    ],
+  },
+  {
+    id: 3,
+    title: "Chapter 3",
+    images: [
+      { id: "3-1", name: "Page 001", url: "/placeholder.svg?height=400&width=300", order: 1 },
+      { id: "3-2", name: "Page 002", url: "/placeholder.svg?height=400&width=300", order: 2 },
+      { id: "3-3", name: "Page 003", url: "/placeholder.svg?height=400&width=300", order: 3 },
+      { id: "3-4", name: "Page 004", url: "/placeholder.svg?height=400&width=300", order: 4 },
+      { id: "3-5", name: "Page 005", url: "/placeholder.svg?height=400&width=300", order: 5 },
+      { id: "3-6", name: "Page 006", url: "/placeholder.svg?height=400&width=300", order: 6 },
+      { id: "3-7", name: "Page 007", url: "/placeholder.svg?height=400&width=300", order: 7 },
+      { id: "3-8", name: "Page 008", url: "/placeholder.svg?height=400&width=300", order: 8 },
+      { id: "3-9", name: "Page 009", url: "/placeholder.svg?height=400&width=300", order: 9 },
+      { id: "3-10", name: "Page 010", url: "/placeholder.svg?height=400&width=300", order: 10 },
+      { id: "3-11", name: "Page 011", url: "/placeholder.svg?height=400&width=300", order: 11 },
+      { id: "3-12", name: "Page 012", url: "/placeholder.svg?height=400&width=300", order: 12 },
+      { id: "3-13", name: "Page 013", url: "/placeholder.svg?height=400&width=300", order: 13 },
+      { id: "3-14", name: "Page 014", url: "/placeholder.svg?height=400&width=300", order: 14 },
+      { id: "3-15", name: "Page 015", url: "/placeholder.svg?height=400&width=300", order: 15 },
+    ],
+  },
+]
